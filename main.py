@@ -1,8 +1,10 @@
+import asyncio
+
+import importService
 import psycopg2
 from sanic import Sanic, response
-import asyncio
-import importService
 
+# Consider https://github.com/MagicStack/asyncpg in place of psycopg2
 
 app = Sanic("NFTWS")
 

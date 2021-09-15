@@ -1,14 +1,14 @@
 import asyncio
 
 import importService
-import psycopg2
+import asyncpg
 from sanic import Sanic, response
 
 # Consider https://github.com/MagicStack/asyncpg in place of psycopg2
 
 app = Sanic("NFTWS")
 
-conn = psycopg2.connect(
+conn = asyncpg.connect(
     host="localhost",
     database="nfts",
     user="root",
